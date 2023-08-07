@@ -15,7 +15,7 @@ import { CharacteristicsComponentComponent } from './characteristics-component/c
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([]), // Add RouterModule.forRoot([])
+    RouterModule.forRoot([]), 
   ],
   providers: [],
   bootstrap: [AppComponent],
