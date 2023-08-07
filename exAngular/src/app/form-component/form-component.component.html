@@ -1,0 +1,21 @@
+<form>
+  <label for="id">ID:</label>
+  <input type="text" id="id" [(ngModel)]="formData.id">
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" [(ngModel)]="formData.name">
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" [(ngModel)]="formData.lastName">
+
+  <label for="position">Position:</label>
+  <input type="text" id="position" [(ngModel)]="formData.position">
+
+  <label for="salary">Salary:</label>
+  <input type="text" id="salary" [(ngModel)]="formData.salary">
+
+  <button type="button" (click)="addPerson()">Add Person</button>
+</form>
+
+<app-characteristics-component [characteristics]="formData.characteristics"></app-characteristics-component>
+

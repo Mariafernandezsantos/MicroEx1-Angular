@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Formulario y Características</h1>
+  <app-form-component (personAdded)="onPersonAdded($event)"></app-form-component>
+  <app-characteristics-component [characteristics]="addedCharacteristics"></app-characteristics-component>
+</div>
+
+
+<router-outlet></router-outlet>
