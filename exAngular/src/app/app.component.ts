@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   addedCharacteristics: string[] = [];
 
-  onPersonAdded(personData: any) {
-    this.addedCharacteristics.push(...personData.characteristics);
+  onCharacteristicsAdded(characteristics: string[]) {
+    this.addedCharacteristics = characteristics;
   }
 }

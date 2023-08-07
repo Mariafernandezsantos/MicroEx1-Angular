@@ -17,5 +17,16 @@
   <button type="button" (click)="addPerson()">Add Person</button>
 </form>
 
+<ul>
+  <li *ngFor="let person of peopleList">
+    ID: {{ person.id }}, Name: {{ person.name }}, Last Name: {{ person.lastName }}, Position: {{ person.position }}, Salary: {{ person.salary }}
+    <ul>
+      <li *ngFor="let characteristic of person.characteristics">{{ characteristic }}</li>
+    </ul>
+  </li>
+</ul>
+
+
+
 <app-characteristics-component [characteristics]="formData.characteristics"></app-characteristics-component>
 

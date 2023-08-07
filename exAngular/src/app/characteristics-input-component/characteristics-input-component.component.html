@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]="characteristic" placeholder="Add Characteristic">
+<ul>
+  <li *ngFor="let characteristic of characteristicsList">{{ characteristic }}</li>
+</ul>
+
+<button (click)="addCharacteristic()">Add</button>
+

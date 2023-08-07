@@ -14,18 +14,27 @@ export class FormComponentComponent {
     salary: '',
     characteristics: [],
   };
+  peopleList: any[] = [];
 
-  @Output() personAdded = new EventEmitter<any>();
+  @Output() characteristicsAdded = new EventEmitter<string[]>();
 
-  addPerson() {
-    this.personAdded.emit(this.formData);
-    this.formData = {
-      id: '',
-      name: '',
-      lastName: '',
-      position: '',
-      salary: '',
-      characteristics: [],
-    };
-  }
+ addPerson() {
+  this.peopleList.push({
+    id: this.formData.id,
+    name: this.formData.name,
+    lastName: this.formData.lastName,
+    position: this.formData.position,
+    salary: this.formData.salary,
+    characteristics: this.formData.characteristics.slice()
+  });
+  this.characteristicsAdded.emit(this.formData.characteristics);
+  this.formData = {
+    id: '',
+    name: '',
+    lastName: '',
+    position: '',
+    salary: '',
+    characteristics: []
+  };
+}
 }
